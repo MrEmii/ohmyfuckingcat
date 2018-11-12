@@ -9,6 +9,10 @@
   
 }
 
+.hidescroll{
+  overflow-x: hidden; 
+}
+
 .App .contencito{
   background: #2c2c2e;
   width: 100%;

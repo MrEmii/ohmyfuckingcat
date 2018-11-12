@@ -56,15 +56,23 @@ body{
 .content .body .cats .row .column img:hover{
   cursor: pointer;
   animation: maximage forwards 300ms linear;
+  translate: all linear 200ms;
+  -webkit-box-shadow: 0px 0px 52px 0px rgba(0,0,0,0.9);
+  -moz-box-shadow: 0px 0px 52px 0px rgba(0,0,0,0.9);
+  box-shadow: 0px 0px 52px 0px rgba(0,0,0,0.9);
+
 }
 @keyframes maximage {
   from {
     transform: scale(1,1)
-    
   }
   to {
     transform: scale(1.1,1.1)
   }
+}
+
+.hidescroll{
+  overflow-x: hidden; 
 }
 
 
@@ -85,7 +93,7 @@ body{
   border-radius: 10px;
   box-shadow: 0px 11px 15px rgba(0, 0, 0, 0.2), 0px 9px 46px rgba(0, 0, 0, 0.12), 0px 24px 38px rgba(0, 0, 0, 0.14);
   margin: auto;
-  width: 900px;
+  /*width: 900px;*/
   height: 730px;
   flex-direction: column;  
   user-select: none;

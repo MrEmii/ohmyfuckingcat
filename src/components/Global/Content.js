@@ -30,7 +30,7 @@ export default class Content extends Component {
     }
   }
   componentDidMount(){
-    
+  
     function getUrlParameter(sParam) {
       var sPageURL = window.location.search.substring(1),
         sURLVariables = sPageURL.split('&'),
@@ -150,6 +150,16 @@ return out;
 
   
   componentDidUpdate(){
+  
+  //Hover y blur
+  // var item = $('.i-e');
+  // item.hover(function(){
+  //   item.not($(this)).addClass("iblur");
+  // }, function(){
+  //   item.removeClass('iblur');
+  // })
+
+
 
     function getaverageColor(imagen) {
       var r=0, g=0, b=0, count = 0, canvas, ctx, imageData, data, i;
@@ -182,6 +192,7 @@ return out;
     image.onload = function() {
       average_color = getaverageColor(this);      
       document.getElementById('modal').style.background = rgbToHex(average_color);
+      document.getElementById('modal').style.width = image.width;
     }
 
     
@@ -192,6 +203,7 @@ return out;
           }, () => {
             var modal = document.getElementById('mmodal');   
             modal.style.display = 'flex';
+            
           })
         }
     })

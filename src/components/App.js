@@ -11,8 +11,7 @@ import Footer from './Global/Footer';
 
 class App extends Component {
   
-  render() {
-    
+  render() {    
     return (
       <div className="App">         
           <Header />
