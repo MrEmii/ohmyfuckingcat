@@ -216,9 +216,13 @@ return out;
   }
 
   share = (e) => {
-    console.log('ohmyfuckingcat.ga?current='+btoa(this.state.current.split('media/')[1]))
+    //console.log('ohmyfuckingcat.ga?current='+btoa(this.state.current.split('media/')[1]))
+    var s = document.getElementById('share')
+    var url = 'web.ohmyfuckingcat.ga?current='+btoa(this.state.current.split('media/')[1])
+    s.href = "http://twitter.com/home?status=Miren ésta hermosa foto de un gatito! 😹😹😹 "+url + " @MrEmii @KiritoDev ";
+    s.target = "__blank"
+    s.click();    
   }
-  
   render() {
 
     
@@ -235,6 +239,7 @@ return out;
     return (
       <React.Fragment>
         <a id="download"></a>
+        <a id="share" data-text="hey miren esto!" data-related="MrEmiii,KiritoDev" data-show-count="false"></a>
         <div className="l-mmain" id="mmodal">
           <div id="modal" className="l-modal">
             <img src={this.state.current} height="675px" alt=""/>
