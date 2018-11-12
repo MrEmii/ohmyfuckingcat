@@ -50,7 +50,7 @@ export default class Content extends Component {
     var img = getUrlParameter('current');
     try{
       if(img){      
-        fetch('http://127.0.0.1:3001/api/check', {
+        fetch('http://35.236.71.155:3001/api/check', {
           method: 'POST',
           body: {
             path: atob(img)
@@ -126,7 +126,7 @@ out.push(a.slice(size * n));
 return out;
   }
 
-    fetch('http://127.0.0.1:3001/api/cats', {
+    fetch('http://35.236.71.155:3001/api/cats', {
       method: 'POST',
       
     }).then(response => {
