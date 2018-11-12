@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import './css/Content.css';
 
-import imagentest from '../cats/gato-gesto.jpg';
+import up from './images/up.svg';
 import download from './images/download.png';
 import share from './images/share.png';
 
@@ -160,7 +160,25 @@ return out;
   // })
 
 
+    
 
+    $(document).ready(function(){
+    
+      $('.wup').click(function(){
+        $('body, html').animate({
+          scrollTop: '0px'
+        }, 300);
+      });
+    
+      $(window).scroll(function(){
+        if( $(this).scrollTop() > 700 ){
+          $('.wup').slideDown(300);
+        } else {
+          $('.wup').slideUp(300);
+        }
+      });
+    
+    });
     function getaverageColor(imagen) {
       var r=0, g=0, b=0, count = 0, canvas, ctx, imageData, data, i;
       canvas = document.createElement('canvas');
@@ -253,8 +271,8 @@ return out;
         <a id="download"></a>
         <a id="share" data-text="hey miren esto!" data-related="MrEmiii,KiritoDev" data-show-count="false"></a>
         <div className="l-mmain" id="mmodal">
-          <div id="modal" className="l-modal">
-            <img src={this.state.current} height="675px" alt=""/>
+        <div id="modal" className="l-modal">
+        <img src={this.state.current} height="675px" alt=""/>
             <div className="button-bar">
               <button className="button-style" onClick={this.download}>
                 <img className="img" src={download} width="16px" alt=""/>
@@ -282,6 +300,7 @@ return out;
             </div>
           </div>
         </div>
+        <span id="wup" className="wup"><img src={up} width="32px" height="32px" alt=""/></span>
       </React.Fragment>
     );
   }
