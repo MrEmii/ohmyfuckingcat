@@ -88,6 +88,7 @@ body{
   width: 900px;
   height: 730px;
   flex-direction: column;  
+  user-select: none;
 }
 
 .l-mmain .l-modal img{
