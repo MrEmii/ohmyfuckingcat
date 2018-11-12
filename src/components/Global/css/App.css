@@ -1,0 +1,38 @@
+.App {
+  background: #2c2c2e;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  
+}
+
+.App .contencito{
+  background: #2c2c2e;
+  width: 100%;
+  min-width: 100%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #424242; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(51, 51, 51); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(19, 17, 17); 
+}
+
+

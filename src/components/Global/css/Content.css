@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body{
+  background: #2c2c2e;
+}
+.content{
+  background: #2c2c2e;
+  display: flex;
+  margin: auto;
+  width: 100%;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content .body {  
+  background: #2c2c2e;
+  font-size: calc(10px + 2vmin);
+  color: #ececec;
+  box-sizing: border-box;  
+}
+
+
+.content .body .cats{
+  background: #2c2c2e;
+  margin: auto;
+  box-sizing: border-box;  
+}
+
+.content .body .cats .row {
+  background: #2c2c2e;
+  display: flex;  
+  flex-wrap: wrap;
+  padding: 0 4px;
+  justify-content: center;
+  box-sizing: border-box;    
+}
+
+
+.content .body .cats .row .column {
+  background: #2c2c2e;
+  flex: 13%;
+  max-width: 14.2%;
+  box-sizing: border-box;  
+  padding: 0 4px;
+}
+
+.content .body .cats .row .column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  -webkit-user-drag: none;
+  user-select: none;  
+  box-sizing: border-box;  
+}
+
+.content .body .cats .row .column img:hover{
+  cursor: pointer;
+  animation: maximage forwards 300ms linear;
+}
+@keyframes maximage {
+  from {
+    transform: scale(1,1)
+    
+  }
+  to {
+    transform: scale(1.1,1.1)
+  }
+}
+
+
+.l-mmain{    
+  display: none;
+  width: 100%;
+  height: 100vh;    
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.7); 
+}
+
+.l-mmain .l-modal{
+  display: flex;
+  background: #000000d5;
+  border-radius: 10px;
+  box-shadow: 0px 11px 15px rgba(0, 0, 0, 0.2), 0px 9px 46px rgba(0, 0, 0, 0.12), 0px 24px 38px rgba(0, 0, 0, 0.14);
+  margin: auto;
+  width: 900px;
+  height: 730px;
+  flex-direction: column;  
+}
+
+.l-mmain .l-modal img{
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.button-bar{
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+
+.button-style{
+  background: #2c2c2e;  
+  border-radius: 3px;
+  font-size: 15px;
+  color: whitesmoke;
+  width: 150px;
+  height: 30px;
+  border: none;
+  outline: none;
+  display: flex;  
+  margin: auto;  
+  
+}
+
+.button-style .img{
+  margin-right: 5px;  
+  
+  margin: 0px;
+}
+.button-style span{  
+  margin-top: 1px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+.button-style:hover{
+  cursor: pointer;
+  transition: all linear 200ms;
+  background: #46464b;
+}

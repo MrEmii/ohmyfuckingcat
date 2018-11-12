@@ -1,0 +1,10 @@
+.Content{
+  -webkit-user-drag: none;
+  user-select: none;
+}
+.Content img {
+  margin-top: 8px;
+  vertical-align: middle;
+  -webkit-user-drag: none;
+  user-select: none;  
+}
