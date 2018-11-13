@@ -71,6 +71,10 @@ body{
   }
 }
 
+.blur{
+  filter: blur(2px);
+}
+
 .hidescroll{
   overflow-x: hidden; 
 }

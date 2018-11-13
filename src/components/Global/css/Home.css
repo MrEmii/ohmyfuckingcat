@@ -1,0 +1,5 @@
+.star {
+  display: inline-block;
+  margin-left: 0.5rem;
+  transform: scale(1.25);
+}

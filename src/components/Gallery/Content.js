@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-import './css/Content.css';
+import './assets/Content.css';
 
-import up from './images/up.svg';
-import download from './images/download.png';
-import share from './images/share.png';
+import up from './assets/images/up.svg';
+import download from './assets/images/download.png';
+import share from './assets/images/share.png';
 
 import $ from 'jquery';
 
@@ -59,7 +59,7 @@ export default class Content extends Component {
         }).then(response => {
           return response.json()
         }).then(json => {
-          if(json.code == 400){
+          if(json.code === 400){
             this.setState({
                 current: window.location.origin+'/static/media/'+atob(img)
               }, () => {
@@ -77,7 +77,7 @@ export default class Content extends Component {
     var modal = document.getElementById('mmodal');    
 
     window.onclick = (event) => {
-            if (event.target == modal) {
+            if (event.target === modal) {
                 modal.style.display = "none";
                 this.setState({
                   current: null
@@ -151,13 +151,13 @@ return out;
   
   componentDidUpdate(){
   
-  //Hover y blur
-  // var item = $('.i-e');
-  // item.hover(function(){
-  //   item.not($(this)).addClass("iblur");
-  // }, function(){
-  //   item.removeClass('iblur');
-  // })
+ // Blur
+ //  var item = $('.i-e');
+ //  item.hover(function(){
+ //    item.not($(this)).addClass("blur");
+ //  }, function(){
+ //    item.removeClass('blur');
+ //  })
 
 
     
@@ -268,8 +268,8 @@ return out;
     
     return (
       <React.Fragment>
-        <a id="download"></a>
-        <a id="share" data-text="hey miren esto!" data-related="MrEmiii,KiritoDev" data-show-count="false"></a>
+        <a id="download" />
+        <a id="share" data-text="hey miren esto!" data-related="MrEmiii,KiritoDev" data-show-count="false"/>
         <div className="l-mmain" id="mmodal">
         <div id="modal" className="l-modal">
         <img src={this.state.current} height="675px" alt=""/>
