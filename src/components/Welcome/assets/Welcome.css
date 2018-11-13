@@ -1,0 +1,35 @@
+.w{
+  display: flex;
+  justify-content: center;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.w .inM{
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 1);
+  margin: auto;
+  top: 270px;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}  
+
+.w .inM img{
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}  
+.w h1{
+  position: absolute;
+  top: 400px;
+  color: antiquewhite;
+  
+  
+}

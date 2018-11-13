@@ -52,12 +52,18 @@ header nav ul li{
   float: left;
   margin-left: auto;
   margin-right: auto;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 header nav ul li a{
    display: block;
    padding: 20px;
    color: #eeeecc;
    text-decoration: none;
+   -webkit-user-drag: none;
    
  }
 

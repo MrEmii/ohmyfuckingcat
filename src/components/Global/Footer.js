@@ -6,7 +6,12 @@ export default class Footer extends Component {
   render() {
     return (
       <div className="footer">
-        <p>Oh My Fucking Cat!&copy;</p>
+        <ul>
+          <li><a href="https://twitter.com/MrEmiii">@MrEmii</a></li>
+          <li><p>Oh My Fucking Cat!&copy;</p></li>
+          <li><a href="https://twitter.com/KiritoDv">@KiritoDev</a></li>
+        </ul>
+
       </div>
     );
   }

@@ -30,3 +30,7 @@ btiviseacc\.tlp
 \.vscode/
 
 *.ppk
+
+--package-lock\.json
+
+backend/yarn\.lock
