@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600');
 *{
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -27,6 +33,11 @@
   width: 100%;
   max-width: 1000px;
   margin: auto;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .container p{
@@ -35,13 +46,13 @@
 
 header nav{
   width: 800px;
+  max-width: 80%;
   border-radius: 15px;
   background: #393e49;
   margin-bottom: 10px;
   display: flex;
   justify-content: center;
-  transition: all ease 1s;
-  
+  transition: all ease 1s;  
 }
 header nav ul{
   list-style-type: none;
@@ -52,11 +63,6 @@ header nav ul li{
   float: left;
   margin-left: auto;
   margin-right: auto;
-  -webkit-user-drag: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 header nav ul li a{
    display: block;
@@ -64,12 +70,17 @@ header nav ul li a{
    color: #eeeecc;
    text-decoration: none;
    -webkit-user-drag: none;
-   
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
  }
 
  header nav ul li a:hover{
+   cursor: pointer;
    transition: all linear 200ms;
    background: #1f232b;
+   
  }
 
  .menu{
@@ -83,11 +94,230 @@ header nav ul li a{
 .menu ul li a {
   padding: 5px 20px;
 }
+
+/*Popup*/
+.overlay{
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+}
+
+.overlay.active{
+  visibility: visible;
+}
+
+.overlay .popup{
+  position: fixed;
+  background: #f8f8f8;
+  color: #393e49;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  font-family: 'Montserrat', sans-serif;
+  padding: 20px;
+  text-align: center;
+  width: 600px;
+  visibility: hidden;
+  transition: .3s ease all;
+  transform: scale(0.7);
+  opacity: 0;
+}
+.overlay .popup .b-cp{
+  font-size: 16px;
+  line-height: 16px;
+  display: block;
+  margin-right: 0;
+  margin-left: 98%;
+  color: #BBBBBB;
+  cursor: pointer;
+  transition: .3s ease all;
+}
+.overlay .popup .b-cp:hover{
+  color: #1f232b;
+  transform: scale(1.2)
+}
+
+.overlay .popup h3{
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  opacity: 0;
+}
+.overlay .popup h4{
+  font-size: 26px;
+  font-weight: 300;
+  margin-bottom: 40px;
+  opacity: 0;
+}
+.overlay .popup h4 a{
+  font-weight: 400;
+  color: #1f2838;
+  transition: 0.3s ease all;
+}
+.overlay .popup h4 a:hover
+{
+  cursor: pointer;
+  font-weight: 600 !important; 
+}
+
+.overlay .popup form .form-group{}
+
+.overlay .popup form .form-group input{
+  width: 100%;
+  margin-bottom: 20px;
+  height: 52px;
+  line-height: 52px;
+  font-size: 18px;
+  text-align: center;
+  border: 1px solid #BBBBBB;
+}
+.overlay .popup form .btn-submit{
+  padding: 0 20px;
+  height: 40px;
+  line-height: 40px;
+  border: none;
+  color: #eeeecc;
+  background: #1f2838;
+  border-radius: 3px;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  transition: .3s ease all;
+}
+
+.overlay .popup form .btn-submit:hover{
+  background: #393e49;
+}
+
+/*anm*/
+
+.overlay .popup.active{
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+.overlay .popup.active h3{
+  animation: inTitle .8s ease .5s forwards;
+}
+.overlay .popup.active h4{
+  animation: inSubTitle .8s ease .5s forwards;
+}
+@keyframes inTitle{
+  from{
+    transform: translateY(-25px);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes inSubTitle{
+  from{
+    transform: translateY(25px);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 5000px){
+  header nav{
+    width: 1000px;
+    font-size: 30px;
+  }
+
+  header nav ul li a{
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 980px){
+  header nav{
+    width: 800px;
+  }
+}
+
+@media screen and (max-width: 830px){
+  header nav{
+    width: 700px;
+    font-size: 25px;
+  }
+  
+  .btn-popup{
+    display: none;
+  }
+
+  header nav ul li a{
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 700px){
+  header nav{
+    width: 400px;
+    font-size: 15px;
+  }
+
+  header nav ul li a{
+    padding: 10px;
+  }
+
+  .menu{
+    width: 70%;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px){
+
+  header nav{
+    width: 350px;
+    font-size: 8px;
+  }
+
+  header nav ul li a{
+    padding: 8px;
+  }
+
+  .menu{
+    font-size: 12px;
+    width: 100%;
+    margin: 0;    
+  }
+}
+
+@media screen and (max-width: 361px){
+
+  header nav{
+    width: 300px;
+    font-size: 10px;
+  }
+
+  header nav ul li a{
+    padding: 4px;
+  }
+
+  .menu{
+    font-size: 9px;
+    width: 100%;
+    margin: 0;    
   }
 }

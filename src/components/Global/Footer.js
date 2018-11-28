@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './css/Footer.css';
+import { Link } from 'react-router-dom';
 
 export default class Footer extends Component {
   

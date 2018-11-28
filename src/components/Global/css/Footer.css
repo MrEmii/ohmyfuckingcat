@@ -23,10 +23,80 @@
   margin-left: auto;
   margin-right: auto;
   margin: 0 13px;
+  justify-content: center;
 }
 
 .footer ul li a{
   display: block;
   color: #eeeecc;
   text-decoration: none;
+}
+
+.tac{
+  font-size: 15px;
+  text-align: center;
+  margin-top: 12px;
+  
+}
+
+
+@media screen and (max-width: 5000px){
+  .footer{
+    height: 80px;
+  }
+
+  .footer ul li .tac{
+    margin-top: 20px;
+    font-size: 23px;
+  }
+}
+
+@media screen and (max-width: 1800px){
+  .footer{
+    height: 50px;
+  }
+
+  .footer ul li .tac{
+    margin-top: 5px;
+    font-size: 23px;
+  }
+}
+
+@media screen and (max-width: 800px){
+  .footer{
+    height: 50px;
+  }
+
+  .footer ul li .tac{
+    margin-top: 15px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 670px){
+  .footer{
+    height: 50px;
+  }
+
+  .footer ul li .tac{
+    margin-top: 10px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px){
+
+  .footer ul li a{
+    font-size: 13px;
+  }
+  
+}
+
+@media screen and (max-width: 361px){
+  .footer{
+    height: 28px;
+  }
+  .footer ul li a{
+    font-size: 9px;
+  }
 }

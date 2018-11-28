@@ -1,0 +1,38 @@
+.mm{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 25px;
+  }
+  .mm h2{
+    color: #eeeecc;
+    text-decoration: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: center;
+  }
+  
+  .mm a{
+    color: #ececee;
+    text-decoration: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: center;
+  }
+
+  .mm h3{
+    color: #eeeecc;
+    text-decoration: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: center;
+  }

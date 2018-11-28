@@ -103,6 +103,7 @@ body{
   left: 0;
   z-index: 99;
   background: rgba(0, 0, 0, 0.7); 
+  justify-content: center;
 }
 
 .l-mmain .l-modal{
@@ -126,6 +127,32 @@ body{
   border-top-right-radius: 10px;
 }
 
+.l-mmain .s-modal{
+  display: none;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 11px 15px rgba(0, 0, 0, 0.2), 0px 9px 46px rgba(0, 0, 0, 0.12), 0px 24px 38px rgba(0, 0, 0, 0.14);
+  width: 40%;
+  height: 10%;
+  position: fixed;
+  flex-direction: column;  
+  user-select: none;
+  margin-top: 250px;
+  color: #2c2c2e;
+  font-size: 15px;
+  justify-content: center;
+}
+
+.l-mmain .s-modal h2{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.l-mmain .s-modal:hover{
+  transition: all 100ms linear;
+  height: 30%;
+}
+
 .button-bar{
   display: flex;
   flex-direction: row;
@@ -138,12 +165,14 @@ body{
   border-radius: 3px;
   font-size: 15px;
   color: whitesmoke;
-  width: 150px;
+  min-width: 100px;
+  max-width: 150px;
   height: 30px;
   border: none;
   outline: none;
   display: flex;  
   margin: auto;  
+  justify-content: space-evenly;
   
 }
 
@@ -162,4 +191,18 @@ body{
   cursor: pointer;
   transition: all linear 200ms;
   background: #46464b;
+}
+
+.bsl{
+  background: rgb(101, 172, 101);
+}
+.bsl{
+  background: rgb(192, 80, 80);
+}
+
+.bsul{
+  background: rgb(192, 80, 80);
+}
+.bsul:hover{
+  background: rgb(101, 172, 101);
 }

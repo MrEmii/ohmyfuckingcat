@@ -1,20 +1,25 @@
 import React, { Component } from 'react'
 
-import cat from '../Global/images/maintence.png'
 import './assets/Welcome.css';
 
 class Welcome extends Component{
 
-  componentDidMount(){}
+  componentDidMount(){
+    
+/*    fetch("https://auth.ohmyfuckingcat.com/auth/username", {
+      method: 'POST',
+      mode: 'no-cors'
+    }).then(json => {
+      console.log(json.ok);
+    })
+    */
+  }
 
   render(){
     return(
       <React.Fragment>
         <div className="w">
-          <div className="inM">
-            <img src={cat} alt=""/>
-          </div>
-          <h1>Estamos trabajando en esto!</h1>
+             <h1>Todas tus imagnes de gatitos tiernos en la palma de tú mano!</h1>         
         </div>
       </React.Fragment>
     );

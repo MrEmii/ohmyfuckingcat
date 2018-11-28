@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDownload, faShareSquare, faHandSpock, faThumbsUp, faWindowClose} from '@fortawesome/free-solid-svg-icons';
 
 import './assets/Content.css';
 
 import up from './assets/images/up.svg';
-import download from './assets/images/download.png';
-import share from './assets/images/share.png';
 
 import $ from 'jquery';
 
@@ -31,6 +31,7 @@ export default class Content extends Component {
   }
   componentDidMount(){
   
+
     function getUrlParameter(sParam) {
       var sPageURL = window.location.search.substring(1),
         sURLVariables = sPageURL.split('&'),
@@ -53,7 +54,7 @@ export default class Content extends Component {
         fetch('http://35.236.71.155:3001/api/check', {
           method: 'POST',
           body: {
-            path: atob(img)
+            path: atob(img),
           }
           
         }).then(response => {
@@ -159,6 +160,7 @@ return out;
  //    item.removeClass('blur');
  //  })
 
+    
 
     
 
@@ -221,7 +223,8 @@ return out;
           }, () => {
             var modal = document.getElementById('mmodal');   
             modal.style.display = 'flex';
-            
+            var sm = document.getElementById('sm');
+            sm.style.display = 'none';
           })
         }
     })
@@ -247,11 +250,14 @@ return out;
 
   share = (e) => {
     //console.log('ohmyfuckingcat.ga?current='+btoa(this.state.current.split('media/')[1]))
-    var s = document.getElementById('share')
+   /* var s = document.getElementById('share')
     var url = 'web.ohmyfuckingcat.ga?current='+btoa(this.state.current.split('media/')[1])
     s.href = "http://twitter.com/home?status=Miren ésta hermosa foto de un gatito! 😹😹😹 "+url + " @MrEmii @KiritoDev ";
     s.target = "__blank"
-    s.click();    
+    s.click();    */
+    var sm = document.getElementById('sm');
+    sm.style.display = 'flex';
+
   }
   render() {
 
@@ -271,16 +277,20 @@ return out;
         <a id="download" />
         <a id="share" data-text="hey miren esto!" data-related="MrEmiii,KiritoDev" data-show-count="false"/>
         <div className="l-mmain" id="mmodal">
-        <div id="modal" className="l-modal">
-        <img src={this.state.current} height="675px" alt=""/>
+          <div id="sm" className="s-modal">
+            <button><FontAwesomeIcon icon={faWindowClose} /></button>
+            <h2>Share with your friends!</h2>
+          </div>  
+          <div id="modal" className="l-modal">
+            <img src={this.state.current} height="675px" alt=""/>
             <div className="button-bar">
               <button className="button-style" onClick={this.download}>
-                <img className="img" src={download} width="16px" alt=""/>
-                <span>{"Download       "}</span>
+                <FontAwesomeIcon icon={faDownload} />
+                <span>Download</span>
               </button>              
               <button className="button-style" onClick={this.share}>
-                <img src={share} className="img" width="16px" alt=""/>
-                <span>Share on Twitter</span>
+                <FontAwesomeIcon icon={faShareSquare} />
+                <span>Share</span>
               </button>
             </div>
           </div>
